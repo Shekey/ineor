@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Hero from './components/hero';
+import Form from './components/form';
+import './scss/_all.scss';
+
+let data = {
+  "title":"book your barber",
+  "subtitle": "Great Hair Doesn't Happend By Chance. It Happens By Appointment!",
+  "subtitleSecondPart": "So Don't Wait And Book Your Appointment Now!",
+  "barberTitle": "book your appointment"
+}
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Hero title={data.title} subtitle={data.subtitle} subtitleSecondPart={data.subtitleSecondPart}/>
+      <div className="main-content">
+      <figure>
+        <img src="./img/image.jpg" alt="Barber" />
+      </figure>
+      <Form title={data.barberTitle} />
+      </div>
     </div>
   );
 }

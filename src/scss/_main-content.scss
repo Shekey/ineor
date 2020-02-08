@@ -1,0 +1,13 @@
+.main-content {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    max-width: 1440px;
+    position: relative;
+
+    figure {
+        padding: 15px;
+        border: 3px solid black;
+        max-width: 900px;
+    }
+}
